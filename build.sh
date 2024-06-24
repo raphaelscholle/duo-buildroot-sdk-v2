@@ -53,25 +53,26 @@ function get_available_board()
 
 function choose_board()
 {
-  echo "Select a target to build:"
+  # echo "Select a target to build:"
 
-  echo ${MILKV_BOARD_ARRAY[@]} | xargs -n 1 | sed "=" | sed "N;s/\n/. /"
+  # echo ${MILKV_BOARD_ARRAY[@]} | xargs -n 1 | sed "=" | sed "N;s/\n/. /"
 
-  local index
-  read -p "Which would you like: " index
+  # local index
+  # read -p "Which would you like: " index
 
-  if [[ -z $index ]]; then
-    echo "Nothing selected."
-    exit 0
-  fi
+  # if [[ -z $index ]]; then
+  #   echo "Nothing selected."
+  #   exit 0
+  # fi
 
-  if [[ -n $index && $index =~ ^[0-9]+$ && $index -ge 1 && $index -le $MILKV_BOARD_ARRAY_LEN ]]; then
-    MILKV_BOARD="${MILKV_BOARD_ARRAY[$((index - 1))]}"
-    #echo "index: $index, Board: $MILKV_BOARD"
-  else
-    print_err "Invalid input!"
-    exit 1
-  fi
+  # if [[ -n $index && $index =~ ^[0-9]+$ && $index -ge 1 && $index -le $MILKV_BOARD_ARRAY_LEN ]]; then
+  #   MILKV_BOARD="${MILKV_BOARD_ARRAY[$((index - 1))]}"
+  #   #echo "index: $index, Board: $MILKV_BOARD"
+  # else
+  #   print_err "Invalid input!"
+  #   exit 1
+  # fi
+MILKV_BOARD=3
 }
 
 function prepare_env()
