@@ -72,7 +72,7 @@ function choose_board()
   #   print_err "Invalid input!"
   #   exit 1
   # fi
-MILKV_BOARD=3
+MILKV_BOARD=milkv-duos-glibc-arm64-sd
 }
 
 function prepare_env()
