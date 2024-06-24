@@ -37,6 +37,7 @@ jobs:
           cd linux_5.10/drivers/net/wireless/realtek/
           git clone https://github.com/openhd/rtl8812au/ -b rapha
           #git clone https://github.com/openhd/rtl88x2bu/
+          echo "$PWD"
           cp -rv rtl8812au/* ../../../../linux_5.10/
           
           # cd ..
