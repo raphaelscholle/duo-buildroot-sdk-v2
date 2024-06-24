@@ -7,6 +7,6 @@
 # obj-$(CONFIG_RTL8187)		+= rtl818x/
 # obj-$(CONFIG_RTLWIFI)		+= rtlwifi/
 # obj-$(CONFIG_RTL8188FU)     	+= rtl8188f/
-obj-m += rtl8812au/
+# obj-m += rtl8812au/
 # obj-m += rtl88x2bu/
 
