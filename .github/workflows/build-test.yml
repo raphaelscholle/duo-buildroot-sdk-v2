@@ -36,10 +36,19 @@ jobs:
           sudo apt install -y git pkg-config build-essential ninja-build automake autoconf libtool wget curl git gcc libssl-dev bc slib squashfs-tools android-sdk-libsparse-utils jq python3-distutils scons parallel tree python3-dev python3-pip device-tree-compiler ssh cpio fakeroot libncurses5 flex bison libncurses5-dev genext2fs rsync unzip dosfstools mtools tcl openssh-client cmake expect
           cd linux_5.10/drivers/net/wireless/realtek/
           git clone https://github.com/openhd/rtl8812au/ -b rapha
+          rm -Rf build
+          rm -Rf tools
+          rm -Rf Makefile 
+          rm -Rf *.sh
+          rm -Rf Makefile
+          rm -Rf Kconfig
           #git clone https://github.com/openhd/rtl88x2bu/
           echo "$PWD"
-          cp -rv rtl8812au/* ../../../../linux_5.10/
-          
+          cp -rv rtl8812au/* ../../../../
+          cd ..
+          rm -Rf rtl8812au
+          git clone https://github.com/openhd/rtl8812au/ -b rapha
+          cd ..
           # cd ..
           # cd rtl88x2bu
           # sed -i 's/CONFIG_PLATFORM_I386_PC = y/CONFIG_PLATFORM_I386_PC = n/' Makefile
